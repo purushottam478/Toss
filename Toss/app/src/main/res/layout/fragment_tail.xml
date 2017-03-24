@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.rajulnahar.toss.Fragments.TailFragment">
+
+    <include layout="@layout/tailcard" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/fl_hidefoot"
+        android:background="@android:color/transparent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#222222"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_gravity="center">
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+
+
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tosstext"
+            android:id="@+id/fab_tail"
+            app:backgroundTint="@color/tailtheme"
+            android:layout_gravity="center"
+            app:elevation="10dp"/>
+        <RelativeLayout
+            android:id="@+id/rlVote"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            >
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/ivHeadVote"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/headempty"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvHeadVote"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/ivHeadVote"
+                android:layout_marginLeft="5dp"
+                android:text="Heads"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/tailempty"
+                android:id="@+id/ivTailVote"
+                android:paddingRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:text="Tails"
+                android:gravity="center"
+                android:id="@+id/tvTailVote"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/ivTailVote"
+
+                />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</FrameLayout>
